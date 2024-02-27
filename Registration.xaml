@@ -1,0 +1,52 @@
+﻿<Window x:Class="StutentsKyrs.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StutentsKyrs"
+        mc:Ignorable="d"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+         TextElement.FontWeight="Regular"
+         TextElement.FontSize="13"
+         TextOptions.TextFormattingMode="Ideal"
+         TextOptions.TextRenderingMode="Auto"
+         Background="{DynamicResource MaterialDesignPaper}"
+         FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="Registration" Height="450" Width="800">
+    <Grid Background="#ffdadada">
+        <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color ="LightGray" ShadowDepth="0"></DropShadowEffect>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Добро пожаловать!" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"></TextBlock>
+                <Grid Margin="0 0 0 20">
+                    <Button HorizontalAlignment="Left" Content="Регистрация"></Button>
+                    <Button HorizontalAlignment="Right" Content="Авторизация" Click="Button_Window_Auth_Click"></Button>
+                </Grid>
+                <Grid Margin="0 0 30 20">
+                    <RadioButton x:Name = "rb_students" HorizontalAlignment="Left" Content="Студент" Height="18" VerticalAlignment="Top" Checked="rb_students_Checked"></RadioButton>
+                    <RadioButton x:Name = "rb_prepods" HorizontalAlignment="Right" Content="Куратор" Checked="rb_prepods_Checked"></RadioButton>
+                </Grid>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Width="210" HorizontalAlignment="Left" Margin="0, 0, 40, 0">
+                        <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                        <PasswordBox x:Name="passBox" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
+                        <StackPanel x:Name="PanelGroup" Visibility="Hidden">
+                            <Label Content="Выберите группу:" />
+                            <ComboBox Width="210" Height="25" x:Name="comboGroup"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Width="210" HorizontalAlignment="Right">
+                        <TextBox x:Name="textBoxName" materialDesign:HintAssist.Hint="Введите имя" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                        <TextBox x:Name="textBoxFamilia" materialDesign:HintAssist.Hint="Введите фамилию" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    </StackPanel>
+                </StackPanel>
+
+                <Button Content="Зарегестрироваться" Margin="0 20" Click="Button_Reg_Click"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

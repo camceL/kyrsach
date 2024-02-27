@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="db81c84fbb09446db5e5c45d272bc871" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Attendance" Width="1.5" PointX="9" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Distiplines" Width="1.5" PointX="9" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Evaluation" Width="1.5" PointX="6.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Group" Width="1.5" PointX="1.375" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Users" Width="1.5" PointX="4.5" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_Attendance_ToUser" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Distiplines_ToUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Evaluation_ToDistiplines" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Evaluation_ToGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Evaluation_ToUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Group_ToKyrator" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Users_ToGroup" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,22 @@
+﻿<Window x:Class="StutentsKyrs.AddDiscipline"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StutentsKyrs"
+        mc:Ignorable="d"
+        Title="AddDiscipline" Height="400" Width="800">
+    <Grid>
+        <Label Content="Введите название дисциплины: " HorizontalAlignment="Left" Margin="499,23,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxAddDistipline" HorizontalAlignment="Left" Margin="507,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="Menu" Content="Назад" HorizontalAlignment="Left" Margin="17,347,0,0" VerticalAlignment="Top" Height="27" Cursor="Hand" Click="ToMenu"/>
+        <Label Content="Выберите преподавателя:" HorizontalAlignment="Left" Margin="500,105,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBoxPrepod" HorizontalAlignment="Left" Margin="507,134,0,0" Width="120" VerticalAlignment="Top"/>
+        <Button x:Name="save_button" Content="Сохранить" HorizontalAlignment="Left" Margin="480,223,0,0" VerticalAlignment="Top" Height="27" Cursor="Hand" Click="save_button_Click"/>
+        <Button x:Name="delete_button" Content="Удалить" HorizontalAlignment="Left" Margin="603,223,0,0" VerticalAlignment="Top" Height="27" Cursor="Hand" Click="delete_button_Click"/>
+        <Button x:Name="clear_button" Content="Очистить" HorizontalAlignment="Left" Margin="543,272,0,0" VerticalAlignment="Top" Height="27" Cursor="Hand" Click="clear_button_Click"/>
+        <ListBox x:Name="DistiplineList" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="53,56,561,120" SelectionChanged="DistiplineList_SelectionChanged"/>
+        <Label Content="Дисциплины" HorizontalAlignment="Left" Margin="53,23,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
